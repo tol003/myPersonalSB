@@ -1,0 +1,102 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+/** nav bar**/
+.nav-container{
+  background: #006699;
+  background: -webkit-linear-gradient(left top, #006699, #1ab6ff);
+  background: -o-linear-gradient(bottom right, #006699, #1ab6ff);
+  background: -moz-linear-gradient(bottom right, #006699, #1ab6ff);
+  background: linear-gradient(to bottom right, #006699, #1ab6ff);
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  height: 62px;
+  font-family: optima, sans serif;
+
+}
+
+.nav-container > ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+
+.nav-container > ul > li {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.nav-container > ul > li:hover {
+  /*background: #0077b3;*/
+  background-color: rgba(0,0,0,.20);
+}
+
+.nav-container > ul > li a + div {
+  background: #006699;
+  background: -webkit-linear-gradient(left top, #006699, #1ab6ff);
+  background: -o-linear-gradient(bottom right, #006699, #1ab6ff);
+  background: -moz-linear-gradient(bottom right, #006699, #1ab6ff);
+  background: linear-gradient(to bottom right, #006699, #1ab6ff);
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 3px 1px rgba(0,0,0,.05);
+  display: none;
+  font-size: 14px;
+  position: absolute;
+  width: 195px;
+  cursor: pointer;
+}
+
+.nav-container > ul > li:hover a + div {
+  display: block;
+}
+
+.nav-container > ul > li a + div > ul {
+  list-style-type: none;
+}
+
+.nav-container > ul > li a + div > ul > li {
+  margin: 0 0 0 -40px;
+  padding: 0;
+}
+
+.nav-container > ul > li a + div > ul > li > a {
+  color: rgba(255,255,255,.9);
+  display: block;
+  font-size: 12px
+  letter-spacing: 1.5px;
+  padding: 4px 24px;
+  text-decoration: none;
+}
+
+.nav-container > ul > li a + div > ul > li:hover > a {
+  background-color: rgba(0,0,0,.20);
+}
+
+.nav-container > ul > li > a {
+  align-items: flex-start;
+  color: white;
+  display: flex;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  max-width: 128px;
+  padding: 16px 24px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+/** end nav bar **/
+
+/** **/
