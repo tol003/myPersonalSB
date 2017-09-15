@@ -7,6 +7,7 @@ function playMusic(id){
     currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./site_images/pauseCircle.png)';
     music.currentTime = 0;
     music.play();
+  }
 
   else{
     currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./site_images/playCircle.png)';
