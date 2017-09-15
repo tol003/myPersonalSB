@@ -14,7 +14,7 @@ h1{
   background: -o-linear-gradient(bottom right, #00394d, #004d4d);
   background: -moz-linear-gradient(bottom right, #00394d, #004d4d);
   background: linear-gradient(to bottom right, #00394d, #004d4d);*/
-  background-image: url('../site-images/nav_back.png');
+  background-image: url('../site_images/nav_back.png');
   display: flex;
   width: 100%;
   z-index: 1;
@@ -28,7 +28,7 @@ h1{
   flex-grow: 0.5;
   flex-shrink: 0;
   flex-basis: 2%;
-  background-image: url('../site-images/logo.png');
+  background-image: url('../site_images/logo.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -213,7 +213,7 @@ tr{
   height: 140px;
   width: 220px;
   border: 1px solid black;
-  background-image:url('../site-images/placeholder.png');
+  background-image:url('../site_images/placeholder.png');
   background-position: center;
   background-size: cover;
 }
@@ -235,7 +235,7 @@ tr{
     flex-grow: 0.5;
     flex-shrink: 0;
     flex-basis: 2%;
-    background-image: url('../site-images/trees.jpg');
+    background-image: url('../site_images/trees.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -261,7 +261,7 @@ tr{
 
 .button-overlay{
   position: absolute;
-  background-image: url("../site-images/playCircle.png");
+  background-image: url("../site_images/playCircle.png");
   background-repeat: no-repeat;
   background-size: 80px auto;
   background-position: center;
