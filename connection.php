@@ -14,7 +14,7 @@
        * return false on failure and a mysqli Object on success
        */
       public function __construct() {
-        $config = parse_ini_file('../../config.ini');
+        $config = parse_ini_file('../../myConfig.ini');
         $this ->db_host = $config['host'];
         $this ->db_user = $config['username'];
         $this ->db_pass = $config['password'];
