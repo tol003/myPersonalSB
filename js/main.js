@@ -8,22 +8,6 @@ function playMusic(id){
     music.currentTime = 0;
     music.play();
 
-$.ajax({
-         type: "GET",
-         url: "log.php",
-         data: {
-               "sid":id
-               }
-        });
-       /* success: function(data) {
-                  alert(data);
-                 console.log(5 + 6);
-
-                                   }
-                     });*/
-
-  }
-
   else{
     currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./site_images/playCircle.png)';
     music.pause();
