@@ -175,6 +175,17 @@ table{
   height: 50px;
 }
 
+#sb-image{
+  width: 25%;
+  text-align: center;
+}
+
+#sb-title{
+  width: 75%;
+  text-align: left;
+  padding: 0 0 0 10%;
+}
+
 tr{
   height: 150px;
   width: 100%;
@@ -182,13 +193,12 @@ tr{
   /*border-bottom: 2px solid black;*/
 }
 
-#sb-image{
+.image-column{
   width: 25%;
-  text-align: center;
 }
 
-#sb-title{
-  width: 25%;
+.title-column{
+  width: 75%;
 }
 /** end table adjustments **/
 

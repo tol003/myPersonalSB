@@ -16,17 +16,16 @@
       while($row = mysqli_fetch_assoc($result)){
 
          $str .= '<tr class="sb-box">
-                    <td class="table-row">
+                    <td class="image-column">
                       <form class="form-button" action="./mySB/sounds.php" method="get">
                         <input class="sb-button" type="submit" value="">
                         <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                       </form>
                     </td>
-                    <td>
+                    <td class="title-column">
                         <p class="pub-title">'. $row['board_name'] .'</p>
                     </td>
-                  </tr>
-                  <hr>';
+                  </tr>';
       }
 
       echo $str;
