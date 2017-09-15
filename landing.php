@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <title>v2 Soundboard</title>
-  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../images/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icon-72x72.png">
@@ -40,7 +40,7 @@
         </div>
       </li>
       <?php if(isset($_SESSION['user_email'])): ?>
-        <li><a href="/crud/log_out.php"><div>Log Out</div></a>
+        <li><a href="./log_out.php"><div>Log Out</div></a>
         </li>
       <?php endif; ?>
       <?php if ($_SESSION['admin']=='1'): ?>
