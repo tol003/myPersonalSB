@@ -17,8 +17,8 @@
 
          $str .= '<tr class="sb-box">
                     <td class="image-column">
-                      <form class="sb-image-btn" action="./mySB/sounds.php" method="get">
-                        <input class="sb-button" type="submit" value="">
+                      <form class="sb-form" action="./sounds.php" method="get">
+                        <input class="sb-image-btn" type="submit" value="">
                         <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                       </form>
                     </td>
