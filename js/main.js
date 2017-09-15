@@ -4,7 +4,7 @@ function playMusic(id){
   music = currArtist.getElementsByTagName('audio')[0];
 
   if(music.paused){
-    currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./playStuff/pauseCircle.png)';
+    currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(../site-images/pauseCircle.png)';
     music.currentTime = 0;
     music.play();
 
@@ -25,7 +25,7 @@ $.ajax({
   }
 
   else{
-    currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./playStuff/playCircle.png)';
+    currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(../site-images/playCircle.png)';
     music.pause();
   }
 }
