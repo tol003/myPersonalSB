@@ -25,7 +25,8 @@
                     <td>
                         <p class="pub-title">'. $row['board_name'] .'</p>
                     </td>
-                  </tr>';
+                  </tr>
+                  <hr>';
       }
 
       echo $str;

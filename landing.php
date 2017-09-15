@@ -52,7 +52,6 @@
     <tr id="table-heading">
       <th id="sb-image">Board Images</th>
       <th id="sb-title">Board Titles</th>
-      <th></th>
     </tr>
     <?php
       require_once('action.php');
