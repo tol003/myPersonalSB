@@ -50,7 +50,18 @@
       <?php endif ?>
     </ul>
     <?php
-      echo '<p class="login" id="hello">'. $_SESSION['user_first_name'] .'</p>';
+      if(isset($_SESSION['user_email'])){
+        echo '<p class="login" id="hello">Hello, '. $_SESSION['user_first_name'] .'</p>';
+      }
+
+      else{
+        echo '<form id="register" action="./registration.php" method="get">
+          <input type="submit" value="Register">
+        </form>
+        <form id="login" action="./login.php" method="get">
+          <input type="submit" value="Sign in">
+        </form>';
+      }
     ?>
   </div>
   <h1>Public Sounds</h1>
