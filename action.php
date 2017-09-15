@@ -23,14 +23,7 @@
                       </form>
                     </td>
                     <td>
-                      <form class="title-form">
-                        <input id="'. $row['board_id'] .'" name="sb-title" class=title-field type="text" value="'. $row['board_name'] .'" disabled>
-                        <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                      </form>
-                    </td>
-                    <td>
-                      <form class="trash-container">
-                      </form>
+                        <p class="pub-title">'. $row['board_name'] .'</p>
                     </td>
                   </tr>';
       }
