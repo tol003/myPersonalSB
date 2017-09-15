@@ -253,7 +253,9 @@ tr{
 }
 
 .button-wrapper{
-  position: relative;
+  display: flex;
+  justify-content: center;
+  /*position: relative;*/
   width: 300px;
   height: 180px;
   opacity: 1;
@@ -261,8 +263,8 @@ tr{
 }
 
 .image-sound{
-  /*max-width: 100%;
-  max-height: 100%;*/
+  max-width: 100%;
+  max-height: 100%;
   object-fit: fill;
   border: 1px solid black;
 }
