@@ -213,7 +213,7 @@ tr{
   height: 140px;
   width: 220px;
   border: 1px solid black;
-  background-image:url('./images/placeholder.png');
+  background-image:url('../images/placeholder.png');
   background-position: center;
   background-size: cover;
 }
@@ -242,3 +242,42 @@ tr{
   }
 }
 /** end screen adjustments **/
+
+/** sound overlays **/
+.button-wrapper{
+  position: relative;
+  width: 300px;
+  height: 180px;
+  opacity: 1;
+  margin: 0 2px 4px 2px;
+}
+
+.image-sound{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.button-overlay{
+  position: absolute;
+  background-image: url("../images/playCircle.png");
+  background-repeat: no-repeat;
+  background-size: 80px auto;
+  background-position: center;
+  width: 300px;
+  height: 180px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.18s ease-in-out;
+  -moz-transition: opacity 0.18s ease-in-out;
+  -webkit-transition: opacity 0.18s ease-in-out;
+}
+
+.button-wrapper:hover .button-overlay{
+  opacity: 0.6;
+  transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+}
+/** end sound overlays **/
