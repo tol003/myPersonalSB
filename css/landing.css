@@ -202,6 +202,14 @@ tr{
   border-bottom: 2px solid black;
 }
 
+.sb-image-btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 0 2px;
+}
+
+
 .title-column{
   width: 75%;
   padding: 0 0 0 10%;
