@@ -9,11 +9,12 @@ h1{
 
 /** nav bar elements **/
 .nav-container{
-  background: #00394d;
+  /*background: #00394d;
   background: -webkit-linear-gradient(left top, #00394d, #004d4d);
   background: -o-linear-gradient(bottom right, #00394d, #004d4d);
   background: -moz-linear-gradient(bottom right, #00394d, #004d4d);
-  background: linear-gradient(to bottom right, #00394d, #004d4d);
+  background: linear-gradient(to bottom right, #00394d, #004d4d);*/
+  background-image: url('../images/nav_back.png');
   display: flex;
   width: 100%;
   z-index: 1;
@@ -115,6 +116,8 @@ h1{
   color: white;
   height: auto;
   flex-grow: 0.1;
+  border: 1px solid transparent;
+  margin: 1px;
 }
 
 #login:hover{
@@ -142,6 +145,8 @@ h1{
   color: white;
   height: auto;
   flex-grow: 0.1;
+  border: 1px solid transparent;
+  margin: 1px;
 }
 
 #register:hover{
@@ -159,6 +164,7 @@ h1{
 }
 /** end nav bar elements **/
 
+
 /** table adjustments **/
 table{
   width: 100%;
@@ -167,6 +173,13 @@ table{
 
 #table-heading{
   height: 50px;
+}
+
+tr{
+  height: 150px;
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-bottom: 2px solid black;
 }
 
 #sb-image{
@@ -178,6 +191,7 @@ table{
   width: 25%;
 }
 /** end table adjustments **/
+
 
 /** screen size adjustments **/
 @media screen and (min-width: 1000px){
