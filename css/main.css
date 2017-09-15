@@ -244,6 +244,14 @@ tr{
 /** end screen adjustments **/
 
 /** sound overlays **/
+#sound-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2% 0 0 0;
+}
+
 .button-wrapper{
   position: relative;
   width: 300px;
@@ -253,9 +261,10 @@ tr{
 }
 
 .image-sound{
+  justify-content: center;
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   border: 1px solid black;
 }
 
