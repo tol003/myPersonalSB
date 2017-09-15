@@ -47,7 +47,6 @@
     ?>
   </div>
   <h1>Public Soundboards</h1>
-  <hr>
   <table id="soundboard-container">
     <tr id="table-heading">
       <th id="sb-image">Board Images</th>
