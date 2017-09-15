@@ -1,0 +1,196 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+/** nav bar elements **/
+.nav-container{
+  background: #00394d;
+  background: -webkit-linear-gradient(left top, #00394d, #004d4d);
+  background: -o-linear-gradient(bottom right, #00394d, #004d4d);
+  background: -moz-linear-gradient(bottom right, #00394d, #004d4d);
+  background: linear-gradient(to bottom right, #00394d, #004d4d);
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  height: 62px;
+  font-family: optima, sans serif;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  flex-grow: 0.5;
+  flex-shrink: 0;
+  flex-basis: 2%;
+  background-image: url('../images/logo.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav-container > ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 6;
+}
+
+.nav-container > ul > li {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.nav-container > ul > li:hover {
+  /*background: #0077b3;*/
+  background-color: rgba(0,0,0,.20);
+}
+
+.nav-container > ul > li a + div {
+  background: #00394d;
+  background: -webkit-linear-gradient(left top, #00394d, #004d4d);
+  background: -o-linear-gradient(bottom right, #00394d, #004d4d);
+  background: -moz-linear-gradient(bottom right, #00394d, #004d4d);
+  background: linear-gradient(to bottom right, #00394d, #004d4d);
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 3px 1px rgba(0,0,0,.05);
+  display: none;
+  font-size: 18px;
+  position: absolute;
+  width: 195px;
+  cursor: pointer;
+}
+
+.nav-container > ul > li:hover a + div {
+  display: block;
+}
+
+.nav-container > ul > li a + div > ul {
+  list-style-type: none;
+}
+
+.nav-container > ul > li a + div > ul > li {
+  margin: 0 0 0 -40px;
+  padding: 0;
+}
+
+.nav-container > ul > li a + div > ul > li > a {
+  color: rgba(255,255,255,.9);
+  display: block;
+  font-size: 12px
+  letter-spacing: 1.5px;
+  padding: 4px 24px;
+  text-decoration: none;
+}
+
+.nav-container > ul > li a + div > ul > li:hover > a {
+  background-color: rgba(0,0,0,.20);
+}
+
+.nav-container > ul > li > a {
+  align-items: flex-start;
+  color: white;
+  display: flex;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  max-width: 128px;
+  padding: 16px 24px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+#login{
+  display: flex;
+  justify-content: center;
+  color: white;
+  height: auto;
+  flex-grow: 0.1;
+}
+
+#login:hover{
+  border: 1px solid white;
+}
+
+#login > input{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: optima, sans serif;
+  font-size: 14px;
+  color: white;
+  outline: none;
+}
+
+#hello{
+  width: 10%;
+  align-items: center;
+}
+
+#register{
+  display: flex;
+  justify-content: center;
+  color: white;
+  height: auto;
+  flex-grow: 0.1;
+}
+
+#register:hover{
+  border: 1px solid white;
+}
+
+#register > input{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: optima, sans serif;
+  font-size: 14px;
+  color: white;
+  outline: none;
+}
+/** end nav bar elements **/
+
+/** table adjustments **/
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#table-heading{
+  height: 50px;
+}
+
+#sb-image{
+  width: 25%;
+  text-align: center;
+}
+
+#sb-title{
+  width: 25%;
+}
+/** end table adjustments **/
+
+/** screen size adjustments **/
+@media screen and (min-width: 1000px){
+  #logo{
+    display: flex;
+    justify-content: center;
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 2%;
+    background-image: url('../images/trees.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/** end screen adjustments **/
