@@ -261,10 +261,10 @@ tr{
 }
 
 .image-sound{
+  display: flex;
   justify-content: center;
   max-width: 100%;
   max-height: 100%;
-  object-fit: fill;
   border: 1px solid black;
 }
 
