@@ -178,12 +178,14 @@ table{
 #sb-image{
   width: 25%;
   text-align: center;
+  border-bottom: 4px solid black;
 }
 
 #sb-title{
   width: 75%;
   text-align: left;
   padding: 0 0 0 10%;
+  border-bottom: 4px solid black;
 }
 
 tr{
