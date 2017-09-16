@@ -15,13 +15,10 @@
 
       while($row = mysqli_fetch_assoc($result)){
 
-         $bid;
-
-         if($bid != $row['board_id']){
-           $str .= '<tr class="sb-box">
+        $str .= '<tr class="sb-box">
                       <td class="image-column">
                         <form class="sb-form" action="./sounds.php" method="get">
-                          <input style="background-image:url('. $row['img_path'] .')" class="sb-image-btn" type="submit" value="">
+                          <input class="sb-image-btn" type="submit" value="">
                           <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                         </form>
                       </td>
@@ -29,8 +26,23 @@
                           <p class="pub-title">'. $row['board_name'] .'</p>
                       </td>
                     </tr>';
-           $bid = $row['board_id'];
-         }
+
+        /*$bid;
+
+        if($bid != $row['board_id']){
+          $str .= '<tr class="sb-box">
+                     <td class="image-column">
+                       <form class="sb-form" action="./sounds.php" method="get">
+                         <input style="background-image:url('. $row['img_path'] .')" class="sb-image-btn" type="submit" value="">
+                         <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                       </form>
+                     </td>
+                     <td class="title-column">
+                       <p class="pub-title">'. $row['board_name'] .'</p>
+                     </td>
+                   </tr>';
+          $bid = $row['board_id'];
+        }*/
       }
 
       echo $str;
