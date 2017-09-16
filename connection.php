@@ -48,7 +48,9 @@
 
         $db = $this ->connect();
 
-        $query = "
+        return $result = $db->query("CALL setSBImage()");
+
+        /*$query = "
             SELECT
             board_id,
             board_name
@@ -57,7 +59,20 @@
           where
             public = 1";
 
-        return $result = $db->query($query);
+        return $result = $db->query($query);*/
+      }
+
+      public function userCreateSB($userId, $boardName, $public){
+
+        $userInt = intval($userId);
+        $nameEsc = $this->escapeStr($boardName);
+        $publicInt = intval($public);
+
+        $db = $this->connect();
+
+
+        return $result = $db->query("CALL createSB(".$userInt.",".
+            $nameEsc.",".$publicInt.")");
       }
 
       public function userGetSB($userID){
@@ -80,19 +95,6 @@
             has_boards.board_id = soundboards.board_id";
 
         return $result = $db->query($query);
-      }
-
-      public function userCreateSB($userId, $boardName, $public){
-
-        $userInt = intval($userId);
-        $nameEsc = $this->escapeStr($boardName);
-        $publicInt = intval($public);
-
-        $db = $this->connect();
-
-
-        return $result = $db->query("CALL createSB(".$userInt.",".
-            $nameEsc.",".$publicInt.")");
       }
 
       public function userUpdateSB($boardID, $boardName){

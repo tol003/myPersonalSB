@@ -15,11 +15,17 @@
 
       while($row = mysqli_fetch_assoc($result)){
 
+         $image;
+
          $str .= '<tr class="sb-box">
                     <td class="image-column">
-                      <form class="sb-form" action="./sounds.php" method="get">
-                        <input class="sb-image-btn" type="submit" value="">
-                        <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                      <form class="sb-form" action="./sounds.php" method="get">';
+         if($image != $row['img_path']){
+            $str .=     '<input style="background-image:url('. $row['img_path'] .')" class="sb-image-btn" type="submit" value="">';
+            $image = $row['img_path'];
+         }
+
+         $str .=        '<input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                       </form>
                     </td>
                     <td class="title-column">
