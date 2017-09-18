@@ -5,8 +5,10 @@
 
     unset($_SESSION['fromLogin']);
     require_once('action.php');
-    getUserInfo($_POST['user_email'], $_POST['password']);
+    $result = getUserInfo($_POST['user_email'], $_POST['password']);
 
-    header('Location: landing.php');
+    if($result){
+      header('Location: landing.php');
+    }
   }
 ?>

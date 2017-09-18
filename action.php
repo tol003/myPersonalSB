@@ -227,9 +227,12 @@
       $_SESSION['last_name'] = $row['last_name'];
       $_SESSION['email'] = $row['email'];
       $_SESSION['admin'] = $row['admin'];
+
+      return true;
     }
 
     else{
+      $_SESSION['fromLogin'] = '1';
       header('Location: login_error.php');
     }
   }
