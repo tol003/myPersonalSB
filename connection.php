@@ -246,6 +246,8 @@
         $emailEsc = $this->escapeStr($user_email);
         $passEsc = $this->escapeStr($password);
 
+        $db = $this->connect();
+
         $query = "
           SELECT *
           FROM
@@ -254,8 +256,6 @@
             email = ". $emailEsc ."
           AND
             password = PASSWORD(". $passEsc .")";
-
-        echo '<script>console.log($query)</script>';
 
         echo '<script>console.log("About to query")</script>';
 
