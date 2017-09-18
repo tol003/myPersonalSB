@@ -135,6 +135,7 @@ h1{
 }
 
 #hello{
+  display: flex;
   width: 10%;
   align-items: center;
   justify-content: center;
