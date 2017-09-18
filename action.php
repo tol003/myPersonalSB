@@ -228,6 +228,8 @@
       $_SESSION['email'] = $row['email'];
       $_SESSION['admin'] = $row['admin'];
 
+      echo '<script>console.log("Before returning true")</script>';
+
       return true;
     }
 
