@@ -227,15 +227,10 @@
       $_SESSION['last_name'] = $row['last_name'];
       $_SESSION['email'] = $row['email'];
       $_SESSION['admin'] = $row['admin'];
-
-      echo '<script>console.log("Inside true")</script>';
-
-      return true;
     }
 
     else{
 
-      echo '<script>console.log("Inside false")</script>';
       $_SESSION['login_error'] = '1';
       header('Location: login.php');
       die();
