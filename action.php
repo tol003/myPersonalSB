@@ -228,14 +228,16 @@
       $_SESSION['email'] = $row['email'];
       $_SESSION['admin'] = $row['admin'];
 
-      echo '<script>console.log("Before returning true")</script>';
+      echo '<script>console.log("Inside true")</script>';
 
-      return true;
+      //return true;
     }
 
     else{
-      $_SESSION['fromLogin'] = '1';
-      header('Location: login_error.php');
+
+      echo '<script>console.log("Inside false")</script>';
+      //$_SESSION['fromLogin'] = '1';
+      //header('Location: login_error.php');
     }
   }
 
