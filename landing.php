@@ -40,7 +40,7 @@
         </div>
       </li>
       <?php if(isset($_SESSION['email'])): ?>
-        <li><a href="./log_out.php"><div>Log Out</div></a>
+        <li><a href="./logout.php"><div>Log Out</div></a>
         </li>
       <?php endif; ?>
       <?php if ($_SESSION['admin']=='1'): ?>
