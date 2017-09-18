@@ -30,7 +30,7 @@
         </form>
         <?php
           if($_SESSION['login_error'] == '1'){
-            <p id="err-msg">*Sorry, there was an error with the username or password while logging in. Please try again.*</p>
+            echo '<p id="err-msg">*Sorry, there was an error with the username or password while logging in. Please try again.*</p>';
             unset($_SESSION['login_error']);
           }
         ?>
