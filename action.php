@@ -236,8 +236,9 @@
     else{
 
       echo '<script>console.log("Inside false")</script>';
-      $_SESSION['fromLogin'] = '1';
-      header('Location: login_error.php');
+      $_SESSION['login_error'] = '1';
+      header('Location: login.php');
+      die();
     }
   }
 
