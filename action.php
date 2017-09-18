@@ -230,14 +230,14 @@
 
       echo '<script>console.log("Inside true")</script>';
 
-      //return true;
+      return true;
     }
 
     else{
 
       echo '<script>console.log("Inside false")</script>';
-      //$_SESSION['fromLogin'] = '1';
-      //header('Location: login_error.php');
+      $_SESSION['fromLogin'] = '1';
+      header('Location: login_error.php');
     }
   }
 
