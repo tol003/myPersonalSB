@@ -218,10 +218,6 @@
 
     $result = ($db->userLogin($email, $password));
 
-    $row_cnt = mysqli_num_rows($result);
-
-    printf("Result has %d rows.\n", $row_cnt);
-
     if(mysqli_num_rows($result) > 0){
 
       $row = mysqli_fetch_assoc($result);
