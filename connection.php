@@ -255,11 +255,11 @@
           AND
             password = PASSWORD(". $passEsc .")";
 
-        echo '<script>About to query</script>';
+        echo '<script>console.log(About to query);</script>';
 
         $result = $db->query($query);
 
-        echo '<script>After query to db</script>';
+        echo '<script>console.log(After query to db);</script>';
 
         return $result;
       }
