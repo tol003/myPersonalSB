@@ -33,13 +33,13 @@
         <div>
           <ul>
             <li><a href="./landing.php">Public</a></li>
-            <?php if(isset($_SESSION['user_email'])): ?>
+            <?php if(isset($_SESSION['email'])): ?>
               <li><a href="./private_SB.php">Private</a></li>
             <?php endif; ?>
           </ul>
         </div>
       </li>
-      <?php if(isset($_SESSION['user_email'])): ?>
+      <?php if(isset($_SESSION['email'])): ?>
         <li><a href="./log_out.php"><div>Log Out</div></a>
         </li>
       <?php endif; ?>
@@ -49,8 +49,8 @@
       <?php endif ?>
     </ul>
     <?php
-      if(isset($_SESSION['user_email'])){
-        echo '<p class="login" id="hello">Hello, '. $_SESSION['user_first_name'] .'</p>';
+      if(isset($_SESSION['email'])){
+        echo '<p class="login" id="hello">Hello, '. $_SESSION['first_name'] .'</p>';
       }
 
       else{
