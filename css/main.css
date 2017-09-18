@@ -203,6 +203,7 @@ tr{
 .image-column{
   width: 25%;
   border-bottom: 2px solid black;
+  cursor: pointer;
 }
 
 .sb-form{
