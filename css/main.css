@@ -205,10 +205,6 @@ tr{
   border-bottom: 2px solid black;
 }
 
-.image-column:hover{
-  cursor: pointer;
-}
-
 .sb-form{
   display: flex;
   justify-content: center;
@@ -223,6 +219,10 @@ tr{
   background-image:url('../site_images/placeholder.png');
   background-position: center;
   background-size: cover;
+}
+
+.sb-image-btn:hover{
+  cursor: pointer;
 }
 
 
