@@ -41,9 +41,10 @@
       </html>
 <?php
     }
+
+    else{
+      echo '<script>console.log("Before header call")</script>';
+      header('Location: landing.php');
+    }
   }
-
-  echo '<script>console.log("Before header call")</script>';
-
-  header('Location: landing.php');
 ?>
