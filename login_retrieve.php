@@ -8,4 +8,5 @@
     getUserInfo($_POST['user_email'], $_POST['password']);
 
     header('Location: landing.php');
+  }
 ?>
