@@ -241,10 +241,10 @@
        *              mySQL function calls for user data                     *
        ***********************************************************************/
 
-      public function userLogin($user_email, $password){
+      public function userLogin($email, $password){
 
-        $emailEsc = $this->escapeStr($user_email);
-        //$passEsc = $this->escapeStr($password);
+        $emailEsc = $this->escapeStr($email);
+        $passEsc = $this->escapeStr($password);
 
         $db = $this->connect();
 
@@ -255,7 +255,7 @@
           WHERE
             email = ". $emailEsc ."
           AND
-            password = PASSWORD(". $password .")";
+            password = PASSWORD(". $passEsc .")";
 
         return $result = $db->query($query);
       }

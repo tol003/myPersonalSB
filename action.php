@@ -212,11 +212,11 @@
 
 /************************* Get User Functions ***************************/
 
-  function getUserInfo($username, $password){
+  function getUserInfo($email, $password){
 
     $db = new Db();
 
-    $result = ($db->userLogin($user_email, $password));
+    $result = ($db->userLogin($email, $password));
 
     $row_cnt = mysqli_num_rows($result);
 
