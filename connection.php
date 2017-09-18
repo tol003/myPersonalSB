@@ -255,7 +255,13 @@
           AND
             password = PASSWORD(". $passEsc .")";
 
-        return $result = $db->query($query);
+        echo '<script>About to query</script>';
+
+        $result = $db->query($query);
+
+        echo '<script>After query to db</script>';
+
+        return $result;
       }
     }
   }
