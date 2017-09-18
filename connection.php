@@ -244,7 +244,7 @@
       public function userLogin($user_email, $password){
 
         $emailEsc = $this->escapeStr($user_email);
-        //$passEsc = $this->escapeStr($password);
+        $passEsc = $this->escapeStr($password);
 
         $query = "
           SELECT *
@@ -253,7 +253,9 @@
           WHERE
             email = ". $emailEsc ."
           AND
-            password = PASSWORD(". $password .")";
+            password = PASSWORD(". $passEsc .")";
+
+        echo '<script>console.log($query)</script>';
 
         echo '<script>console.log("About to query")</script>';
 
