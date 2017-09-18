@@ -227,11 +227,11 @@
       $_SESSION['last_name'] = $row['last_name'];
       $_SESSION['email'] = $row['email'];
       $_SESSION['admin'] = $row['admin'];
+
+      return true;
     }
 
-    else{
-      Header: "Location: login_error.php";
-    }
+    return false;
   }
 
 ?>

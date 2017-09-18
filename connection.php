@@ -257,13 +257,7 @@
           AND
             password = PASSWORD(". $passEsc .")";
 
-        echo '<script>console.log("About to query")</script>';
-
-        $result = $db->query($query);
-
-        echo '<script>console.log("After query to db")</script>';
-
-        return $result;
+        return $result = $db->query($query);
       }
     }
   }
