@@ -28,10 +28,12 @@
           <p id="reg-p">Don't have an account yet?</p>
           <input id="regBtn" type="submit" name="registerBtn" value="Register">
         </form>
-        <?php if($_SESSION['login_error'] == '1'): ?>
-          <p id="err-msg">*Sorry, there was an error with the username or password while logging in. Please try again.*</p>
-          unset($_SESSION['login_error']);
-        <?php endif; ?>
+        <?php
+          if($_SESSION['login_error'] == '1'){
+            <p id="err-msg">*Sorry, there was an error with the username or password while logging in. Please try again.*</p>
+            unset($_SESSION['login_error']);
+          }
+        ?>
     </div>
 </body>
 </html>
