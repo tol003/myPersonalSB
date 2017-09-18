@@ -13,7 +13,7 @@
 </head>
 <body id="login-body">
     <div id="login-container">
-        <form id="login-form" action="./verify.php" method="post">
+        <form id="login-form" action="./login_retrieve.php" method="post">
             <div><h4>Please sign in to continue.</h4></div>
             <hr>
             <label id="email">
