@@ -298,6 +298,7 @@ tr{
   padding: 0;
   font-family: 'Lora', serif;
   background-color: #538cc6;
+  /*background-image: url('../site_images/dark.jpg');*/
 }
 
 #login-container{
@@ -339,7 +340,7 @@ tr{
   font-family: 'Lora', serif;
 }
 
-#name{
+#email{
   position: relative;
   margin: 28px 0 20px 0;
 }
@@ -388,5 +389,14 @@ tr{
 
 #regBtn:focus{
   outline: none;
+}
+
+#err-msg{
+  width: 400px;
+  margin: 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: red;
+  font-size: 14px;
 }
 /** end login page styling **/

@@ -59,7 +59,7 @@
           <input type="submit" value="Register">
         </form>
         <form id="login" action="./login.php" method="get">
-          <input type="submit" value="Sign in">
+          <input type="submit" value="Login">
         </form>';
       }
     ?>

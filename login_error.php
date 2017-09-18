@@ -28,6 +28,7 @@
           <p id="reg-p">Don't have an account yet?</p>
           <input id="regBtn" type="submit" name="registerBtn" value="Register">
         </form>
+        <p id="err-msg">*Sorry, there was an error with the username or password while logging in. Please try again.*</p>
     </div>
 </body>
 </html>

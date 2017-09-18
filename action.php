@@ -210,4 +210,29 @@
     echo $str;
   }
 
+/************************* Get User Functions ***************************/
+
+  function getUserInfo($username, $password){
+
+    $db = new Db();
+
+    $result = ($db->userLogin($user_email, $password));
+
+    if(mysqli_num_rows($result) > 0){
+
+      $row = mysqli_fetch_assoc($result);
+
+      $_SESSION['username'] = $row['username'];
+      $_SESSION['first_name'] = $row['first_name'];
+      $_SESSION['last_name'] = $row['last_name'];
+      $_SESSION['email'] = $row['email'];
+      $_SESSION['admin'] = $row['admin'];
+    }
+
+    else{
+
+      Header: "Location: login_error.php"
+    }
+  }
+
 ?>

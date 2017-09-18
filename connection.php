@@ -240,6 +240,23 @@
       /***********************************************************************
        *              mySQL function calls for user data                     *
        ***********************************************************************/
+
+      public function userLogin($user_email, $password){
+
+        $emailEsc = $this->escapeStr($user_email);
+        $passEsc = $this->escapeStr($password);
+
+        $query = "
+          SELECT *
+          FROM
+            users
+          WHERE
+            email = ". $emailEsc ."
+          AND
+            password = PASSWORD(". $passEsc .")";
+
+        return $result = $db->query($query);
+      }
     }
   }
 ?>
