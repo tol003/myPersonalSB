@@ -43,5 +43,7 @@
     }
   }
 
-  Header: "Location: landing.php";
+  echo '<script>console.log("Before header call")</script>';
+
+  header('Location: landing.php');
 ?>
