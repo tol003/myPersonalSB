@@ -63,7 +63,7 @@
 
     unset($_SESSION['reg_errors']);
 
-    header('Location: registration.php');
+    //header('Location: registration.php');
   }
 
   else{

@@ -31,7 +31,7 @@
         <input id="uName" type="text" name="userName" placeholder=" Username" value="">
         <p>Username can be between 4-30 characters long</p>
         <?php
-          if($_SESSION['user_error'] == '1'){
+          if($_SESSION['user_error'] == '1' && isset($_SESSION['reg_errors'])){
             unset($_SESSION['user_error']);
             echo '<p class="reg-err-msg">* Please make sure username meets the criteria stated above</p>';
           }
@@ -45,7 +45,7 @@
         <input id="pWord" type="password" name="password" placeholder=" Password" value="">
         <p>Password must have at least one upper case, one lower case, one number, and one special character</p>
         <?php
-          if($_SESSION['pass_error'] == '1'){
+          if($_SESSION['pass_error'] == '1' && isset($_SESSION['reg_errors'])){
             unset($_SESSION['pass_error']);
             echo '<p class="reg-err-msg">* Please make sure password meets the criteria stated above</p>';
           }
@@ -54,7 +54,7 @@
       <label class="reg-field" id="rfirst">
         <input id="fName" type="text" name="firstName" placeholder=" First Name" value="">
         <?php
-          if($_SESSION['first_error'] == '1'){
+          if($_SESSION['first_error'] == '1' && isset($_SESSION['reg_errors'])){
             unset($_SESSION['first_error']);
             echo '<p class="reg-err-msg">* First name cannot be empty</p>';
           }
@@ -63,7 +63,7 @@
       <label class="reg-field" id="rlast">
         <input id="lName" type="text" name="lastName" placeholder=" Last Name" value="">
         <?php
-          if($_SESSION['last_error'] == '1'){
+          if($_SESSION['last_error'] == '1' && isset($_SESSION['reg_errors'])){
             unset($_SESSION['last_error']);
             echo '<p class="reg-err-msg">* Last name cannot be empty</p>';
           }
@@ -72,7 +72,7 @@
       <label class="reg-field" id="remail">
         <input id="uEmail" type="text" name="user_email" placeholder=" Email" value="">
         <?php
-          if($_SESSION['email_error'] == '1'){
+          if($_SESSION['email_error'] == '1' && isset($_SESSION['reg_errors'])){
             unset($_SESSION['email_error']);
             echo '<p class="reg-err-msg">* Please make sure the email provided is valid</p>';
           }
