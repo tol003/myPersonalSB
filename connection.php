@@ -259,6 +259,25 @@
 
         return $result = $db->query($query);
       }
+
+      public function userInsert($username, $password, $firstname, $lastname, $email){
+
+        $userEsc = $this->escapeStr($username);
+        $passEsc = $this->escapeStr($password);
+        $firstEsc = $this->escapeStr($firstname);
+        $lastEsc = $this->escapeStr($lastname);
+        $emailEsc = $this->escapeStr($email);
+
+        $db = $this->connect();
+
+        $query = "
+          INSERT INTO
+            (username, password, first_name, last_name, email, admin)
+          VALUES
+            (". $userEsc .", PASSWORD(". $passEsc ."), ". $firstEsc .", ". $lastEsc .", ". $emailEsc .", '0')";
+
+        return $result = $db->query($query);
+      }
     }
   }
 ?>

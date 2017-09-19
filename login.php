@@ -12,9 +12,32 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
 <body id="login-body">
+  <div class="nav-container">
+    <div id="logo"></div>
+    <ul>
+      <li><a href="./landing.php"><div>Soundboards</div></a>
+        <div>
+          <ul>
+            <li><a href="./landing.php">Public</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
   <div id="login-container">
     <form id="login-form" action="./login_retrieve.php" method="post">
-      <div><h4>Please sign in to continue.</h4></div>
+      <div>
+        <?php
+          if($_SESSION['reg_complete'] == '1'){
+            unset($_SESSION['reg_complete']);
+            echo '<h4 id="log-reg-confirm">Registration complete. Please sign in to continue.</h4>';
+          }
+
+          else{
+            echo '<h4>Please sign in to continue.</h4>';
+          }
+        ?>
+      </div>
       <hr>
       <label id="email">
         <input id="uEmail" type="text" name="user_email" placeholder=" Email" value="">

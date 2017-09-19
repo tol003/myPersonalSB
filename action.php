@@ -237,4 +237,16 @@
     }
   }
 
+  function insertUserInfo($username, $password, $firstname, $lastname, $email){
+
+    $db = new Db();
+
+    $result = ($db->userInsert($username, $password, $firstname, $lastname, $email));
+
+    if($result){
+      $_SESSION['reg_complete'] = '1';
+      header('Location: login.php');
+    }
+  }
+
 ?>

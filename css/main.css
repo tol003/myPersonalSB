@@ -303,7 +303,7 @@ tr{
   margin: 0;
   padding: 0;
   font-family: 'Lora', serif;
-  background-color: #538cc6;
+  background-color: #3c3d44;
   /*background-image: url('../site_images/dark.jpg');*/
 }
 
@@ -322,7 +322,7 @@ tr{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #login-form div{
@@ -332,6 +332,10 @@ tr{
   width: 100%;
   height: 28%;
   background-color: #f2f2f2;
+}
+
+#log-reg-confirm{
+  color: #00e6ac;
 }
 
 #login-form hr{
@@ -371,15 +375,6 @@ tr{
   font-size: 14px;
 }
 
-#log-regForm{
-  height: 50px;
-  width: 400px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 #log-regBtn{
   margin: 11px 0 0 0;
   padding: 0;
@@ -407,6 +402,15 @@ tr{
   color: red;
   font-size: 14px;
 }
+
+#log-regForm{
+  height: 50px;
+  width: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 /** end login page styling **/
 
 
@@ -415,12 +419,12 @@ tr{
   margin: 0;
   padding: 0;
   font-family: 'Lora', serif;
-  background-color: #538cc6;
+  background-color: #3c3d44;
   /*background-image: url('../site_images/dark.jpg');*/
 }
 
 #reg-container{
-  margin: 5% 0 0 0;
+  margin: 1% 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -428,23 +432,22 @@ tr{
 }
 
 #reg-form{
-  height: 450px;
+  height: 580px;
   width: 400px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #reg-form div{
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 14%;
-  margin: -44px 0 0 0;
+  height: 11%;
   background-color: #f2f2f2;
+  position: relative;
 }
 
 #reg-form hr{
@@ -459,6 +462,26 @@ tr{
   font-family: 'Lora', serif;
 }
 
+#ruser{
+  top: 10px;
+}
+
+#rpass{
+  top: 30px;
+}
+
+#rfirst{
+  top: 50px;
+}
+
+#rlast{
+  top: 75px;
+}
+
+#remail{
+  top: 100px;
+}
+
 #regBtn{
   margin: 20px 0 0 0;
   width: 100px;
@@ -469,6 +492,8 @@ tr{
   /*border-radius: 4px;*/
   border: 1px solid black;
   cursor: pointer;
+  position: relative;
+  top: 105px;
 }
 
 #regBtn:focus{
@@ -479,8 +504,25 @@ tr{
   font-size: 14px;
 }
 
+.reg-field{;
+  width: 306px;
+  position: relative;
+}
+
+.reg-field > p{
+  font-size: 10px;
+
+}
+
+.reg-err-msg{
+  width: 400px;
+  margin: 2px 0 0 0;
+  color: red;
+  font-size: 14px;
+}
+
 #reg-logForm{
-  height: 30px;
+  height: 80px;
   width: 400px;
   background-color: #ffffff;
   display: flex;
@@ -490,11 +532,11 @@ tr{
 
 #reg-log-p{
   font-size: 14px;
-  margin: 3px 0 0 0;
+  margin: 50px 0 0 0;
 }
 
 #reg-logBtn{
-  margin: 0;
+  margin: 48px 0 0 0;
   padding: 0;
   width: 60px;
   height: 22px;
@@ -510,24 +552,5 @@ tr{
 
 #reg-logBtn:focus{
   outline: none;
-}
-
-.reg-field{
-  margin: 8px 0 0 0;
-  width: 306px;
-}
-
-.reg-field > p{
-  font-size: 10px;
-
-}
-
-#err-msg{
-  width: 400px;
-  margin: 0;
-  text-align: center;
-  background-color: #ffffff;
-  color: red;
-  font-size: 14px;
 }
 /** end registration page styling **/
