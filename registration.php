@@ -28,16 +28,17 @@
       <div id="reg-heading"><h4>Please fill in the form to register.</h4></div>
       <hr>
       <label class="reg-field" id="ruser">
-        <input id="uName" type="text" name="userName" placeholder=" Username" value="">
-        <p>Username can be between 4-30 characters long</p>
         <?php
           if($_SESSION['user_error'] == '1' && isset($_SESSION['from_verify'])){
             unset($_SESSION['user_error']);
-            echo '<p class="reg-err-msg">* Please make sure username meets the criteria stated above</p>';
+            echo '<input id="uName" type="text" name="userName" placeholder=" Username" value="'. $_SESSION['user_temp'] .'">
+                  <p>Username can be between 4-30 characters long</p>
+                  <p class="reg-err-msg">* Please make sure username meets the criteria stated above</p>';
           }
 
           else{
-            echo '<p></p>';
+            echo '<input id="uName" type="text" name="userName" placeholder=" Username" value="">
+                  <p>Username can be between 4-30 characters long</p>';
           }
         ?>
       </label>
