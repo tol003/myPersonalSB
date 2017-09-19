@@ -272,7 +272,7 @@
 
         $query = "
           INSERT INTO
-            (username, password, first_name, last_name, email, admin)
+            users(username, password, first_name, last_name, email, admin)
           VALUES
             (". $userEsc .", PASSWORD(". $passEsc ."), ". $firstEsc .", ". $lastEsc .", ". $emailEsc .", '0')";
 
