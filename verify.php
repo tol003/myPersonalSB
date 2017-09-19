@@ -53,15 +53,15 @@
     $_SESSION['email_error'] = '1';
 
     if(!isset($_SESSION['reg_errors'])){
-      $_SESSION['reg_error'] = '1';
+      $_SESSION['reg_errors'] = '1';
     }
   }
 
-  if($_SESSION['reg_error'] == '1'){
+  if(isset($_SESSION['reg_errors'])){
 
     echo '<script>console.log("Inside reg error before going back to registration page")</script>';
 
-    unset($_SESSION['reg_error']);
+    unset($_SESSION['reg_errors']);
 
     header('Location: registration.php');
   }
