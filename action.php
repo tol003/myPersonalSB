@@ -247,6 +247,10 @@
       $_SESSION['reg_complete'] = '1';
       header('Location: login.php');
     }
+
+    else{
+      echo '<script>console.log("There was an error during the mysql insert")</script>';
+    }
   }
 
 ?>
