@@ -63,6 +63,8 @@
 
     unset($_SESSION['reg_errors']);
 
+    $_SESSION['from_verify'] = '1';
+
     header('Location: registration.php');
   }
 
