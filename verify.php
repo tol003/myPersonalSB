@@ -17,7 +17,7 @@
   $_SESSION['pass_temp'] = $pass_input;
 
 
-  if(preg_match($user_req, $user_input) == '0'){
+  if(!preg_match($user_req, $user_input)){
     $_SESSION['user_error'] = '1';
 
     if(!isset($_SESSION['reg_errors'])){
@@ -25,7 +25,7 @@
     }
   }
 
-  if(preg_match($pass_req, $pass_input) == '0'){
+  if(!preg_match($pass_req, $pass_input)){
     $_SESSION['pass_error'] = '1';
 
     if(!isset($_SESSION['reg_errors'])){
