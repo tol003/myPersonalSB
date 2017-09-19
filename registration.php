@@ -31,13 +31,13 @@
         <?php
           if($_SESSION['user_error'] == '1' && isset($_SESSION['from_verify'])){
             unset($_SESSION['user_error']);
-            echo '<input id="uName" type="text" name="userName" placeholder=" Username" value="'. $_SESSION['user_temp'] .'">
+            echo '<input id="uName" type="text" name="username" placeholder=" Username" value="'. $_SESSION['user_temp'] .'">
                   <p>Username can be between 4-30 characters long</p>
                   <p class="reg-err-msg">* Please make sure username meets the criteria stated above</p>';
           }
 
           else{
-            echo '<input id="uName" type="text" name="userName" placeholder=" Username" value="">
+            echo '<input id="uName" type="text" name="username" placeholder=" Username" value="">
                   <p>Username can be between 4-30 characters long</p>';
           }
         ?>
