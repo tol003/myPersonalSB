@@ -69,6 +69,8 @@
   }
 
   else{
+
+    echo '<script>console.log("Inside else case before calling insert")</script>';
     require_once('action.php');
     insertUserInfo($user_input, $pass_input, $fname_input, $lname_input, $email_input);
   }
