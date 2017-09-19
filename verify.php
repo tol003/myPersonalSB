@@ -57,7 +57,9 @@
     }
   }
 
-  if(isset($_SESSION['reg_error'])){
+  if($_SESSION['reg_error'] == '1'){
+
+    echo '<script>console.log("Inside reg error before going back to registration page")</script>';
 
     unset($_SESSION['reg_error']);
 
