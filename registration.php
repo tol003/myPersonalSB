@@ -101,6 +101,11 @@
               unset($_SESSION['email_error']);
               echo '<p class="reg-err-msg">* Please make sure the email provided is valid</p>';
             }
+
+            else if($_SESSION['email_exist_error'] == '1'){
+              unset($_SESSION['email_exist_error']);
+              echo '<p class="reg-err-msg">* The email provided already exist</p>';
+            }
           }
 
           else{

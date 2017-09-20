@@ -237,7 +237,7 @@
     }
   }
 
-  function insertUserInfo($username, $password, $firstname, $lastname, $email){
+  function createUserInfo($username, $password, $firstname, $lastname, $email){
 
     $db = new Db();
 
@@ -251,6 +251,20 @@
     else{
       echo '<script>console.log("There was an error during the mysql insert")</script>';
     }
+  }
+
+  function checkEmail($email){
+
+    $db = new Db();
+
+    $email_exist = ($db->checkUserEmail($email));
+
+    if(mysqli_num_rows($email_exist) > 0){
+
+      return false;
+    }
+
+    return true;
   }
 
 ?>

@@ -278,6 +278,23 @@
 
         return $result = $db->query($query);
       }
+
+      public function checkUserEmail($email){
+
+        $emailEsc = $this->escapeStr($email);
+
+        $db = $this->connect();
+
+        $query = "
+          SELECT
+            email
+          FROM
+            users
+          WHERE
+            email = ". $emailEsc;
+
+        return $result = $this->query($query);
+      }
     }
   }
 ?>

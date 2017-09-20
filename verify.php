@@ -1,8 +1,10 @@
 <?php
   session_start();
 
+  require_once('action.php');
+
   $user_req = '/^[a-zA-Z0-9_]{6,30}$/';
-  $pass_req = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[a-zA-Z\d][a-zA-Z\d!@#$%^&*()_+]{7,}$/';
+  $pass_req = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[a-zA-Z\d][a-zA-Z\d!@#$%^&*()_+]{7,100}$/';
   $user_input = $_POST['username'];
   $pass_input = $_POST['password'];
   $fname_input = $_POST['firstName'];
@@ -57,6 +59,14 @@
     }
   }
 
+  if(!result = checkEmail($email_input)){
+    $_SESSION['email_exist_error'] = '1';
+
+    if(!isset($_SESSION['reg_errors'])){
+      $_SESSION['reg_errors'] = '1';
+    }
+  }
+
   if(isset($_SESSION['reg_errors'])){
 
     /*echo '<script>console.log("Inside reg error before going back to registration page")</script>';*/
@@ -71,8 +81,8 @@
   else{
 
     echo '<script>console.log("Inside else case before calling insert")</script>';
-    require_once('action.php');
-    insertUserInfo($user_input, $pass_input, $fname_input, $lname_input, $email_input);
+
+    createUserInfo($user_input, $pass_input, $fname_input, $lname_input, $email_input);
   }
 
 ?>
