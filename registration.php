@@ -22,6 +22,9 @@
         </div>
       </li>
     </ul>
+    <form id="login" action="./login.php" method="get">
+      <input type="submit" value="Sign in">
+    </form>
   </div>
   <div id="reg-container">
     <form id="reg-form" action="./verify.php" method="post">

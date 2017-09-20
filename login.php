@@ -22,6 +22,9 @@
         </div>
       </li>
     </ul>
+    <form id="register" action="./registration.php" method="get">
+      <input type="submit" value="Register">
+    </form>
   </div>
   <div id="login-container">
     <form id="login-form" action="./login_retrieve.php" method="post">
