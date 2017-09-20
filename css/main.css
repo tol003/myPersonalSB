@@ -202,6 +202,11 @@ table{
   height: 50px;
 }
 
+.sb-main-image{
+  height: 140px;
+  width: 220px;
+}
+
 #sb-image{
   width: 25%;
   text-align: center;
