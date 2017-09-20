@@ -205,6 +205,7 @@ table{
 .sb-main-image{
   height: 140px;
   width: 220px;
+  position: relative;
   left: 140px;
 }
 
