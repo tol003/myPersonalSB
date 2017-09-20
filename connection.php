@@ -293,7 +293,7 @@
           WHERE
             email = ". $emailEsc;
 
-        return $result = $this->query($query);
+        return $result = $db->query($query);
       }
     }
   }
