@@ -59,7 +59,8 @@
     }
   }
 
-  if(!result = checkEmail($email_input)){
+  if(!$result = checkEmail($email_input)){
+
     $_SESSION['email_exist_error'] = '1';
 
     if(!isset($_SESSION['reg_errors'])){
