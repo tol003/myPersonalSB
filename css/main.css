@@ -250,7 +250,7 @@ tr{
   background-size: cover;*/
   position: relative;
   left: -220px;
-  opacity: 0.2;
+  opacity: 0;
 }
 
 .sb-image-btn:hover{
