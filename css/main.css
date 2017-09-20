@@ -205,8 +205,6 @@ table{
 .sb-main-image{
   height: 140px;
   width: 220px;
-  position: relative;
-  left: 140px;
 }
 
 #sb-image{
@@ -250,6 +248,8 @@ tr{
   background-image:url('../site_images/placeholder.png');
   background-position: center;
   background-size: cover;
+  position: relative;
+  right: 0;
 }
 
 .sb-image-btn:hover{
