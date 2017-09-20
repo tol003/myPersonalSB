@@ -22,7 +22,7 @@
         </div>
       </li>
     </ul>
-    <form id="register" action="./registration.php" method="get">
+    <form id="register-log-nav" action="./registration.php" method="get">
       <input type="submit" value="Register">
     </form>
   </div>
