@@ -249,7 +249,7 @@ tr{
   background-position: center;
   background-size: cover;
   position: relative;
-  right: -220px;
+  left: -220px;
 }
 
 .sb-image-btn:hover{
