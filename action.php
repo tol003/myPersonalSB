@@ -18,6 +18,7 @@
         $str .= '<tr class="sb-box">
                       <td class="image-column">
                         <form class="sb-form" action="./sounds.php" method="get">
+                          <img class="sb-main-image" src="./site_images/trees.jpg">
                           <input class="sb-image-btn" type="submit" value="">
                           <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                         </form>
@@ -52,55 +53,6 @@
       echo '<h2>There are no public Sound Boards</h2>';
     }
   }
-
-  /*function createAdminLanding(){
-
-    $db = new Db();
-
-    $result = ($db->getAllSB());
-
-    if(mysqli_num_rows($result) > 0){
-      while($row = mysqli_fetch_assoc($result)){
-
-         $str .= '<tr class="sb-box">
-                    <td class="table-row">
-                      <form class="form-button" action="/crud/private_sounds.php" method="get">
-                        <input class="sb-button" type="submit" value="">
-                        <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                      </form>
-                    </td>
-                    <td>
-                      <form class="title-form" action="/crud/sb_update_confirm.php" method="post">
-                        <input id="'. $row['board_id'] .'" name="sb-title" class=title-field type="text" value="'. $row['board_name'] .'">
-                        <input class="cancel-btn" type="button" value="">
-                        <input class="confirm-btn" type="submit" value="">
-                        <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                      </form>
-                    </td>
-                    <td>
-                      <form class="trash-container" action="/crud/sb_delete_confirm.php" method="post">
-                        <input class="trash" type="submit" value="">
-                        <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                        <input type="hidden" name="sb-title" value="'. $row['board_name'] .'">
-                        <input type="hidden" name="fromPage" value="adminIndex">
-                      </form>
-                    </td>
-                  </tr>';
-      }
-
-      $str .= '<form   style="text-align:center" action="/crud/private_SB.php" method="POST"  >
-                    <input type="text" name="sb_name" placeholder="Name" required>
-                    <br>
-                    <select name="status">
-                    <option value="0"> private </option>
-                    <option value="1"> public </option>
-                    </select> <br>
-                    <input title="Add SoundBoard" type="image" src="/crud/sb_images/addbtn.png">
-                  </form>';
-    }
-
-    echo $str;
-  }*/
 
   function getSB($userID){
 
