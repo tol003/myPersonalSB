@@ -6,9 +6,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Login v2 Soundboard</title>
-  <?php
-    include('header.php');
-  ?>
 </head>
 <body id="login-body">
   <div class="nav-container">

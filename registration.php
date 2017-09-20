@@ -6,9 +6,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Registration v2 Soundboard</title>
-  <?php
-    include('header.php');
-  ?>
 </head>
 <body id="reg-body">
   <div class="nav-container">
