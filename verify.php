@@ -70,8 +70,6 @@
 
   if(isset($_SESSION['reg_errors'])){
 
-    /*echo '<script>console.log("Inside reg error before going back to registration page")</script>';*/
-
     unset($_SESSION['reg_errors']);
 
     $_SESSION['from_verify'] = '1';
@@ -80,8 +78,6 @@
   }
 
   else{
-
-    echo '<script>console.log("Inside else case before calling insert")</script>';
 
     createUserInfo($user_input, $pass_input, $fname_input, $lname_input, $email_input);
   }

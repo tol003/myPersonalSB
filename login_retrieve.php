@@ -1,12 +1,9 @@
 <?php
   session_start();
 
-  //if($_SESSION['fromLogin'] == '1'){
+  require_once('action.php');
+  
+  getUserInfo($_POST['user_email'], $_POST['password']);
 
-    //unset($_SESSION['fromLogin']);
-    require_once('action.php');
-    getUserInfo($_POST['user_email'], $_POST['password']);
-
-    header('Location: landing.php');
-  //}
+  header('Location: landing.php');
 ?>
