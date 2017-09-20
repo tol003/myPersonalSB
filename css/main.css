@@ -168,11 +168,12 @@ h1{
 
 #register-log-nav{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   color: white;
   height: auto;
-  flex-grow: 0.554;
+  flex-grow: 0.1;
   border: 1px solid transparent;
+  margin: 0 72.5px 0 0;
 }
 
 #register-log-nav:hover{
