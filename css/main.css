@@ -245,11 +245,12 @@ tr{
   height: 140px;
   width: 220px;
   border: 1px solid black;
-  background-image:url('../site_images/placeholder.png');
+  /*background-image:url('../site_images/placeholder.png');
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
   position: relative;
   left: -220px;
+  opacity: 0.2;
 }
 
 .sb-image-btn:hover{
