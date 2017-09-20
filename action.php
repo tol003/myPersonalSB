@@ -257,6 +257,8 @@
 
     $db = new Db();
 
+    echo '<script>console.log("before calling mysql check")</script>';
+
     $email_exist = ($db->checkUserEmail($email));
 
     if(mysqli_num_rows($email_exist) > 0){
