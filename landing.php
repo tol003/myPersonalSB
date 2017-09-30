@@ -18,7 +18,7 @@
           <ul>
             <li><a href="./landing.php">Public</a></li>
             <?php if(isset($_SESSION['email'])): ?>
-              <li><a href="./private_SB.php">Private</a></li>
+              <li><a href="./private_sb.php">Private</a></li>
             <?php endif; ?>
           </ul>
         </div>

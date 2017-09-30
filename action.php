@@ -108,13 +108,13 @@
 
          $str .= '<tr class="sb-box">
                     <td class="table-row">
-                      <form class="form-button" action="/crud/private_sounds.php" method="get">
+                      <form class="form-button" action="./private_sounds.php" method="get">
                         <input class="sb-button" type="submit" value="">
                         <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                       </form>
                     </td>
                     <td>
-                      <form class="title-form" action="/crud/sb_update_confirm.php" method="post" onsubmit="return updateSBConfirm('. $row['board_id'] .')">
+                      <form class="title-form" action="./sb_update_confirm.php" method="post" onsubmit="return updateSBConfirm('. $row['board_id'] .')">
                         <input id="'. $row['board_id'] .'" name="sb-title"
                         class="title-field" type="text" value="'. $row['board_name'] .'">
                         <input class="cancel-btn" type="button" value="">
@@ -123,7 +123,7 @@
                       </form>
                     </td>
                     <td>
-                      <form class="trash-container" action="/crud/sb_delete_confirm.php" method="post" onsubmit="return deleteSBConfirm('. $row['board_id'] .')">
+                      <form class="trash-container" action="./sb_delete_confirm.php" method="post" onsubmit="return deleteSBConfirm('. $row['board_id'] .')">
                         <input class="trash" type="submit" value="">
                         <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
                         <input type="hidden" name="sb-title" value="'. $row['board_name'] .'">
@@ -217,6 +217,7 @@
 
       $row = mysqli_fetch_assoc($result);
 
+      $_SESSION['user_id'] = $row['user_id'];
       $_SESSION['username'] = $row['username'];
       $_SESSION['first_name'] = $row['first_name'];
       $_SESSION['last_name'] = $row['last_name'];
