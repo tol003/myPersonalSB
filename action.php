@@ -152,23 +152,36 @@
                      <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
                           </form>
                         </td>
-                        <td class="title-column">
-                            <p class="pub-title">'. $row['board_name'] .'</p>
+                        <td>
+                          <form class="title-form" action="./sb_update_confirm.php" method="post" onsubmit="return updateSBConfirm('. $row['board_id'] .')">
+                            <input id="'. $row['board_id'] .'" name="sb-title"
+                            class="title-field" type="text" value="'. $row['board_name'] .'">
+                            <input class="cancel-btn" type="button" value="">
+                            <input class="confirm-btn" type="submit" value="">
+                            <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                          </form>
                         </td>
-                      </tr>';
+                        <td>
+                          <form class="trash-container" action="./sb_delete_confirm.php" method="post" onsubmit="return deleteSBConfirm('. $row['board_id'] .')">
+                            <input class="trash" type="submit" value="">
+                            <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                            <input type="hidden" name="sb-title" value="'. $row['board_name'] .'">
+                          </form>
+                        </td>
+                  </tr>';
 
       }
     }
 
-    $str .= '<form   style="text-align:center" action="/crud/private_SB.php" method="POST"  >
-                    <input type="text" name="sb_name" placeholder="Name" required>
-                    <br>
-                    <select name="status">
-                    <option value="0"> private </option>
-                    <option value="1"> public </option>
-                    </select> <br>
-                    <input title="Add SoundBoard" type="image" src="/crud/sb_images/addbtn.png">
-                  </form>';
+    $str .= '<form style="text-align:center" action="/crud/private_SB.php" method="POST"  >
+               <input type="text" name="sb_name" placeholder="Name" required>
+               <br>
+               <select name="status">
+               <option value="0"> private </option>
+               <option value="1"> public </option>
+               </select> <br>
+               <input title="Add SoundBoard" type="image" src="/crud/sb_images/addbtn.png">
+             </form>';
 
     echo $str;
   }

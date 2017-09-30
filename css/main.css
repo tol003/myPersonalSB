@@ -553,3 +553,109 @@ table{
   outline: none;
 }
 /** end registration page styling **/
+
+
+/** private soundboard styling **/
+.title-form{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.title-field{
+  height: 20px;
+  width: 80%;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 0 0 28px;
+  font-family: optima, sans serif;
+  outline: none;
+}
+
+.title-field:focus ~ .confirm-btn{
+  visibility: visible;
+}
+
+.confirm-btn{
+  visibility: hidden;
+  background-image: url('../site_images/check.png');
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+  height: auto;
+  width: 2%;
+  border: none;
+}
+
+.confirm-btn:hover{
+  visibility: visible;
+  outline: none;
+}
+
+.confirm-btn > input{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: optima, sans serif;
+  font-size: 20px;
+  color: white;
+  outline: none;
+}
+
+.cancel-btn{
+  visibility: hidden;
+  background-image: url('../site_images/cancel.png');
+  background-position: center;
+  background-size: contain;
+  background-color: white;
+  background-repeat: no-repeat;
+  border: none;
+  height: auto;
+  width: 5%;
+  margin: 0 10px 0 0;
+}
+
+.cancel-btn:hover{
+  visibility: visible;
+  outline: none;
+}
+
+.cancel-btn > input{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: optima, sans serif;
+  font-size: 20px;
+  color: white;
+  outline: none;
+}
+
+.title-field:focus ~ .cancel-btn{
+  visibility: visible;
+}
+
+.trash-container{
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0.6;
+  width: 100%;
+}
+
+.trash-container:hover{
+  opacity: 1;
+}
+
+.trash{
+  height: 30px;
+  width: 20px;
+  background-image: url('./sb_images/delete_icon.png');
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 60px 0 0;
+}
+/** end private soundboard styling **/
