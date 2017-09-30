@@ -7,6 +7,7 @@
   }
 
   if($_SESSION['email']){
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
       $user_id = $_SESSION['user_id'];
@@ -36,7 +37,7 @@
           <ul>
             <li><a href="./landing.php">Public</a></li>
             <?php if(isset($_SESSION['email'])): ?>
-              <li><a href="./private_sb.php">Private</a></li>
+              <li><a href="./private_SB.php">Private</a></li>
             <?php endif; ?>
           </ul>
         </div>
