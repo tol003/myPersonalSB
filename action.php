@@ -15,7 +15,7 @@
 
       while($row = mysqli_fetch_assoc($result)){
 
-        $str .= '<tr class="sb-box">
+        /*$str .= '<tr class="sb-box">
                       <td class="image-column">
                         <form class="sb-form" action="./sounds.php" method="get">
                           <img class="sb-main-image" src="./site_images/trees_small.jpg">
@@ -26,9 +26,9 @@
                       <td class="title-column">
                           <p class="pub-title">'. $row['board_name'] .'</p>
                       </td>
-                    </tr>';
+                    </tr>';*/
 
-        /*$str .= '<tr class="sb-box">
+        $str .= '<tr class="sb-box">
                      <td class="image-column">
                        <form class="sb-form" action="./sounds.php" method="get">';
 
@@ -52,7 +52,7 @@
                         <td class="title-column">
                             <p class="pub-title">'. $row['board_name'] .'</p>
                         </td>
-                      </tr>';*/
+                      </tr>';
 
         /*$bid;
 
