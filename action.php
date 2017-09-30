@@ -106,7 +106,7 @@
     if(mysqli_num_rows($result) > 0){
       while($row = mysqli_fetch_assoc($result)){
 
-         $str .= '<tr class="sb-box">
+         /*$str .= '<tr class="sb-box">
                     <td class="table-row">
                       <form class="form-button" action="./private_sounds.php" method="get">
                         <input class="sb-button" type="submit" value="">
@@ -129,7 +129,34 @@
                         <input type="hidden" name="sb-title" value="'. $row['board_name'] .'">
                       </form>
                     </td>
-                  </tr>';
+                  </tr>';*/
+
+         $str .= '<tr class="sb-box">
+                     <td class="image-column">
+                       <form class="sb-form" action="./private_sounds.php" method="get">';
+
+          $img_result = ($db->userGetSound($row['board_id']));
+
+          if(mysqli_num_rows($img_result) > 0){
+
+            $img_row = mysqli_fetch_assoc($img_result);
+
+            $str .= '<img class="sb-main-image" src="'. $img_row['img_path'] .'">';
+          }
+
+          else{
+            $str .= '<img class="sb-main-image" src="./site_images/trees_small.jpg">';
+          }
+
+          $str .= '<input class="sb-image-btn" type="submit" value="">
+                     <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                          </form>
+                        </td>
+                        <td class="title-column">
+                            <p class="pub-title">'. $row['board_name'] .'</p>
+                        </td>
+                      </tr>';
+
       }
     }
 
