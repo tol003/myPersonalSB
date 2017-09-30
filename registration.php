@@ -5,14 +5,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Registration v2 Soundboard</title>
+  <title>Registration v2.1 Soundboard</title>
   <?php
     include('header.php');
   ?>
 </head>
 <body id="reg-body">
   <div class="nav-container">
-    <div id="logo"></div>
     <ul>
       <li><a href="./landing.php"><div>Soundboards</div></a>
         <div>

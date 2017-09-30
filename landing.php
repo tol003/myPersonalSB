@@ -5,14 +5,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>v2 Soundboard</title>
+  <title>v2.1 Soundboard</title>
   <?php
     include('header.php');
   ?>
 </head>
 <body>
   <div class="nav-container">
-    <div id="logo"></div>
     <ul>
       <li><a href="./landing.php"><div>Soundboards</div></a>
         <div>
@@ -50,13 +49,16 @@
   </div>
   <h1>Public Soundboards</h1>
   <table id="soundboard-container">
-    <tr id="table-heading">
-      <th id="sb-image">Board Images</th>
-      <th id="sb-title">Board Titles</th>
-    </tr>
-    <?php
-      require_once('action.php');
-      createLanding();
-    ?>
+    <tbody>
+      <tr id="table-heading">
+        <th id="sb-image">Board Images</th>
+        <th id="sb-title">Board Titles</th>
+      </tr>
+      <?php
+        require_once('action.php');
+        createLanding();
+      ?>
+    </tbody>
+  </table>
 </body>
 </html>
