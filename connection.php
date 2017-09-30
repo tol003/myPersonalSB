@@ -48,9 +48,9 @@
 
         $db = $this ->connect();
 
-        /*return $result = $db->query("CALL setSBImage()");*/
+        return $result = $db->query("CALL setSBImage()");
 
-        $query = "
+        /*$query = "
             SELECT
             board_id,
             board_name
@@ -59,7 +59,7 @@
           where
             public = 1";
 
-        return $result = $db->query($query);
+        return $result = $db->query($query);*/
       }
 
       public function userCreateSB($userId, $boardName, $public){

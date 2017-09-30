@@ -28,22 +28,39 @@
                       </td>
                     </tr>';
 
-        /*$bid;
+        $bid;
 
-        if($bid != $row['board_id']){
+        if($bid != $row['board_id'] && $row['img_path'] != ''){
           $str .= '<tr class="sb-box">
                      <td class="image-column">
                        <form class="sb-form" action="./sounds.php" method="get">
-                         <input style="background-image:url('. $row['img_path'] .')" class="sb-image-btn" type="submit" value="">
-                         <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                       </form>
+                          <img class="sb-main-image" src="'. $row['img_path'] .'">
+                          <input class="sb-image-btn" type="submit" value="">
+                          <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                        </form>
                      </td>
                      <td class="title-column">
                        <p class="pub-title">'. $row['board_name'] .'</p>
                      </td>
                    </tr>';
           $bid = $row['board_id'];
-        }*/
+        }
+
+        else{
+          $str .= '<tr class="sb-box">
+                     <td class="image-column">
+                       <form class="sb-form" action="./sounds.php" method="get">
+                          <img class="sb-main-image" src="./site_images/trees_small.jpg">
+                          <input class="sb-image-btn" type="submit" value="">
+                          <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                        </form>
+                     </td>
+                     <td class="title-column">
+                       <p class="pub-title">'. $row['board_name'] .'</p>
+                     </td>
+                   </tr>';
+          $bid = $row['board_id'];
+        }
       }
 
       echo $str;
@@ -197,6 +214,13 @@
 
     if($result){
       $_SESSION['reg_complete'] = '1';
+
+      unset($_SESSION['user_temp']);
+      unset($_SESSION['pass_temp']);
+      unset($_SESSION['first_temp']);
+      unset($_SESSION['last_temp']);
+      unset($_SESSION['email_temp']);
+
       header('Location: login.php');
     }
 
