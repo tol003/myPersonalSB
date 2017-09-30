@@ -15,17 +15,30 @@
 
       while($row = mysqli_fetch_assoc($result)){
 
-          $str .= '<tr class="sb-box">
+        $str .= '<tr class="sb-box">
+                      <td class="image-column">
+                        <form class="sb-form" action="./sounds.php" method="get">
+                          <img class="sb-main-image" src="./site_images/trees_small.jpg">
+                          <input class="sb-image-btn" type="submit" value="">
+                          <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
+                        </form>
+                      </td>
+                      <td class="title-column">
+                          <p class="pub-title">'. $row['board_name'] .'</p>
+                      </td>
+                    </tr>';
+
+        /*$str .= '<tr class="sb-box">
                      <td class="image-column">
                        <form class="sb-form" action="./sounds.php" method="get">';
 
-          $img_result = ($db->userGetSounds($row['board_id']));
+          $img_result = ($db->userGetSound($row['board_id']));
 
           if(mysqli_num_rows($img_result) > 0){
 
             $img_row = mysqli_fetch_assoc($img_result);
 
-            $str .= '<img class="sb-main-image" src="'. $img_result['img_path'] .'">';
+            $str .= '<img class="sb-main-image" src="'. $img_row['img_path'] .'">';
           }
 
           else{
@@ -39,7 +52,7 @@
                         <td class="title-column">
                             <p class="pub-title">'. $row['board_name'] .'</p>
                         </td>
-                      </tr>';
+                      </tr>';*/
 
         /*$bid;
 

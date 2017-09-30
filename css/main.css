@@ -237,7 +237,7 @@ table{
   border: 1px solid black;
   position: relative;
   left: -182px;
-  opacity: 0.6;
+  opacity: 0;
 }
 
 .sb-image-btn:hover{
