@@ -23,25 +23,38 @@
     <body>
       <div class="nav-container">
         <ul>
-          <li><a href="/crud/index.php"><div>Soundboards</div></a>
+          <li><a href="./landing.php"><div>Soundboards</div></a>
             <div>
               <ul>
-                <li><a href="/crud/index.php">Public</a></li>
-                <li><a href="/crud/private_SB.php">Private</a></li>
+                <li><a href="./landing.php">Public</a></li>
+                <?php if(isset($_SESSION['email'])): ?>
+                  <li><a href="./private_SB.php">Private</a></li>
+                <?php endif; ?>
               </ul>
             </div>
           </li>
-          <?php if (isset($_SESSION['user_email'])): ?>
-            <li><a href="/crud/log_out.php"><div>Log Out</div></a>
+          <?php if(isset($_SESSION['email'])): ?>
+            <li><a href="./logout.php"><div>Log Out</div></a>
             </li>
-          <?php endif ?>
+          <?php endif; ?>
           <?php if ($_SESSION['admin']=='1'): ?>
-            <li><a href="/crud/admin_page.php"><div>Admin</div></a>
+            <li><a href="./admin_page.php"><div>Admin</div></a>
             </li>
           <?php endif ?>
         </ul>
         <?php
-          echo '<p class="login" id="hello">'. $_SESSION['user_first_name'] .'</p>';
+          if(isset($_SESSION['email'])){
+            echo '<p class="login" id="hello">Hello, '. $_SESSION['first_name'] .'</p>';
+          }
+
+          else{
+            echo '<form id="register" action="./registration.php" method="get">
+              <input type="submit" value="Register">
+            </form>
+            <form id="login" action="./login.php" method="get">
+              <input type="submit" value="Sign in">
+            </form>';
+          }
         ?>
       </div>
       <h1>Private Sounds</h1>
@@ -53,8 +66,8 @@
         echo  '<div>
                   <p>  </p>
                    <a id="add_btn" title="Add Sound"
-                   href="/crud/soundupload.php?sbid='.$_GET["sbid"].'">
-                    <img src="/crud/sb_images/addbtn.png"> </a>
+                   href="./soundupload.php?sbid='.$_GET["sbid"].'">
+                    <img src="./site_images/addbtn.png"> </a>
                  </div>';
         ?>
       </div>
