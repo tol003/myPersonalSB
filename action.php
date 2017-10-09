@@ -15,19 +15,6 @@
 
       while($row = mysqli_fetch_assoc($result)){
 
-        /*$str .= '<tr class="sb-box">
-                      <td class="image-column">
-                        <form class="sb-form" action="./sounds.php" method="get">
-                          <img class="sb-main-image" src="./site_images/trees_small.jpg">
-                          <input class="sb-image-btn" type="submit" value="">
-                          <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                        </form>
-                      </td>
-                      <td class="title-column">
-                          <p class="pub-title">'. $row['board_name'] .'</p>
-                      </td>
-                    </tr>';*/
-
         $str .= '<tr class="sb-box">
                      <td class="image-column">
                        <form class="sb-form" action="./sounds.php" method="get">';
@@ -53,40 +40,6 @@
                             <p class="pub-title">'. $row['board_name'] .'</p>
                         </td>
                       </tr>';
-
-        /*$bid;
-
-        if($bid != $row['board_id'] && $row['img_path'] != ''){
-          $str .= '<tr class="sb-box">
-                     <td class="image-column">
-                       <form class="sb-form" action="./sounds.php" method="get">
-                          <img class="sb-main-image" src="'. $row['img_path'] .'">
-                          <input class="sb-image-btn" type="submit" value="">
-                          <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                        </form>
-                     </td>
-                     <td class="title-column">
-                       <p class="pub-title">'. $row['board_name'] .'</p>
-                     </td>
-                   </tr>';
-          $bid = $row['board_id'];
-        }
-
-        else{
-          $str .= '<tr class="sb-box">
-                     <td class="image-column">
-                       <form class="sb-form" action="./sounds.php" method="get">
-                          <img class="sb-main-image" src="./site_images/trees_small.jpg">
-                          <input class="sb-image-btn" type="submit" value="">
-                          <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                        </form>
-                     </td>
-                     <td class="title-column">
-                       <p class="pub-title">'. $row['board_name'] .'</p>
-                     </td>
-                   </tr>';
-          $bid = $row['board_id'];
-        }*/
       }
 
       echo $str;
@@ -105,31 +58,6 @@
 
     if(mysqli_num_rows($result) > 0){
       while($row = mysqli_fetch_assoc($result)){
-
-         /*$str .= '<tr class="sb-box">
-                    <td class="table-row">
-                      <form class="form-button" action="./private_sounds.php" method="get">
-                        <input class="sb-button" type="submit" value="">
-                        <input class="hide" type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                      </form>
-                    </td>
-                    <td>
-                      <form class="title-form" action="./sb_update_confirm.php" method="post" onsubmit="return updateSBConfirm('. $row['board_id'] .')">
-                        <input id="'. $row['board_id'] .'" name="sb-title"
-                        class="title-field" type="text" value="'. $row['board_name'] .'">
-                        <input class="cancel-btn" type="button" value="">
-                        <input class="confirm-btn" type="submit" value="">
-                        <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                      </form>
-                    </td>
-                    <td>
-                      <form class="trash-container" action="./sb_delete_confirm.php" method="post" onsubmit="return deleteSBConfirm('. $row['board_id'] .')">
-                        <input class="trash" type="submit" value="">
-                        <input type="hidden" name="sbid" value="'. $row['board_id'] .'">
-                        <input type="hidden" name="sb-title" value="'. $row['board_name'] .'">
-                      </form>
-                    </td>
-                  </tr>';*/
 
          $str .= '<tr class="sb-box">
                      <td class="image-column">
