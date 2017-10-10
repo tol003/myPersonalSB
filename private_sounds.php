@@ -57,18 +57,12 @@
           }
         ?>
       </div>
-      <h1>Private Sounds</h1>
+      <h1>Public Sounds</h1>
       <hr>
       <div id="sound-container">
         <?php
           require_once("action.php");
           getPrivateSounds($_GET['sbid']);
-        echo  '<div>
-                  <p>  </p>
-                   <a id="add_btn" title="Add Sound"
-                   href="./soundupload.php?sbid='.$_GET["sbid"].'">
-                    <img src="./site_images/addbtn.png"> </a>
-                 </div>';
         ?>
       </div>
     </body>
