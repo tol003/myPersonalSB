@@ -113,9 +113,9 @@ function deleteSoundConfirm(sid, sbid){
 }
 
 function redirectSB(sbid){
-  window.location.replace('../private_SB.php?sbid=' + sbid);
+  window.location.replace('/mySB/private_SB.php?sbid=' + sbid);
 }
 
 function redirectSound(sbid){
-  window.location.replace('../private_sounds.php?sbid=' + sbid);
+  window.location.replace('/mySB/private_sounds.php?sbid=' + sbid);
 }
