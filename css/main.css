@@ -666,7 +666,7 @@ table{
 }
 
 .sound-delete{
-  background-image: url('./sb_images/delete_icon.png');
+  background-image: url('../site_images/delete_icon.png');
   height: 30px;
   width: 30px;
   background-position: center;
@@ -681,7 +681,7 @@ table{
 }
 
 .sound-edit{
-  background-image: url('./sb_images/edit_black.png');
+  background-image: url('../site_images/edit_black.png');
   height: 30px;
   width: 30px;
   background-size: cover;

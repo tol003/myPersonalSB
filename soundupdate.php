@@ -5,52 +5,51 @@ session_start();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>v2 Soundboard</title>
-  <link rel="stylesheet" href="./sb.css">
-  <script src="./sb.js"></script>
+  <title>v2.1 Soundboard</title>
+  <?php
+    include('header.php');
+  ?>
 </head>
 <body>
   <div class="nav-container">
     <ul>
-      <li><a href="/crud/index.php"><div>Soundboards</div></a>
+      <li><a href="./landing.php"><div>Soundboards</div></a>
         <div>
           <ul>
-            <li><a href="/crud/index.php">Public</a></li>
-            <?php
-              if($_SESSION['user_email']){
-                echo '<li><a href="/crud/private_SB.php">Private</a></li>';
-              }
-            ?>
+            <li><a href="./landing.php">Public</a></li>
+            <?php if(isset($_SESSION['email'])): ?>
+              <li><a href="./private_SB.php">Private</a></li>
+            <?php endif; ?>
           </ul>
         </div>
       </li>
-      <?php if (isset($_SESSION['user_email'])): ?>
-        <li><a href="/crud/log_out.php"><div>Log Out</div></a>
+      <?php if(isset($_SESSION['email'])): ?>
+        <li><a href="./logout.php"><div>Log Out</div></a>
         </li>
-      <?php endif ?>
+      <?php endif; ?>
       <?php if ($_SESSION['admin']=='1'): ?>
-        <li><a href="/crud/admin_page.php"><div>Admin</div></a>
+        <li><a href="./admin_page.php"><div>Admin</div></a>
         </li>
       <?php endif ?>
     </ul>
     <?php
-      if($_SESSION['user_email']){
-        echo '<p class="login" id="hello">Hello, '. $_SESSION['user_first_name'] .'</p>';
+      if(isset($_SESSION['email'])){
+        echo '<p class="login" id="hello">Hello, '. $_SESSION['first_name'] .'</p>';
       }
 
       else{
-        echo '<form id="register" action="/crud/registration.php" method="get">
+        echo '<form id="register" action="./registration.php" method="get">
           <input type="submit" value="Register">
         </form>
-        <form class="login" action="/crud/login.php" method="get">
-          <input type="submit" value="Login">
+        <form id="login" action="./login.php" method="get">
+          <input type="submit" value="Sign in">
         </form>';
       }
     ?>
-</div>
+  </div>
 <?php
 
-if($_SESSION['user_email'] ){
+if($_SESSION['email'] ){
 require_once("connection.php");
   if($_SERVER["REQUEST_METHOD"] == 'GET'){
   $sound_err = $_REQUEST["sound_err"];
@@ -106,18 +105,18 @@ echo '
 elseif($_SERVER["REQUEST_METHOD"] == "POST"){
    $sound_err = "";
    $img_err = "";
-   $sb_image_dir = "sb_images/".$_SESSION['user_id']."/";
-   $sound_dir = "sounds/".$_SESSION['user_id']."/";
+   $images_dir = "images/".$_SESSION['user_id']."/";
+   $sounds_dir = "sounds/".$_SESSION['user_id']."/";
 
    if (!file_exists($sb_image_dir)) {
-        mkdir($sb_image_dir, 0777, true);
+        mkdir($images_dir, 0777, true);
    }
    if (!file_exists($sound_dir)) {
-      mkdir($sound_dir, 0777, true);
+      mkdir($sounds_dir, 0777, true);
    }
     $uploadOk = 1;
-    $sound_file = $sound_dir . basename($_FILES["soundToUpload"]["name"]);
-    $image_file = $sb_image_dir . basename($_FILES["imageToUpload"]["name"]);
+    $sound_file = $sounds_dir . basename($_FILES["soundToUpload"]["name"]);
+    $image_file = $images_dir . basename($_FILES["imageToUpload"]["name"]);
     $uploadOk_sd = 1;
     $imageFileType = pathinfo($image_file,PATHINFO_EXTENSION);
     $soundFileType = pathinfo($sound_file,PATHINFO_EXTENSION);
@@ -228,7 +227,7 @@ elseif($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo 'File '.$_FILES['soundToUpload']['name'].' uploaded successfully.';
             }
             else{
-                Header("Location: index.php"); 
+                Header("Location: landing.php");
             }
 
             Header("Location: private_sounds.php?sbid=".$sbid);
@@ -340,7 +339,7 @@ elseif($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo 'File '.$_FILES['imageToUpload']['name'].' uploaded successfully.';
             }
             else{
-              Header("Location: index.php");
+              Header("Location: landing.php");
             }
             
             Header("Location: private_sounds.php?sbid=".$sbid);
@@ -351,7 +350,7 @@ elseif($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 }else{
 
-    Header("Location: login.php");
+    Header("Location: landing.php");
 
 }
 ?>
