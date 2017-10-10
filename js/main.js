@@ -42,7 +42,7 @@ function updateSBConfirm(element){
       }
     }
 
-    xhr.open('POST','../update_SB.php', true);
+    xhr.open('POST','/mySB/update_SB.php', true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(str);
   }
@@ -73,7 +73,7 @@ function deleteSBConfirm(element){
       }
     }
 
-    xhr.open('POST','../delete_SB.php', true);
+    xhr.open('POST','/mySB/delete_SB.php', true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(str);
   }
@@ -104,7 +104,7 @@ function deleteSoundConfirm(sid, sbid){
       }
     }
 
-    xhr.open('POST','../delete_sound.php', true);
+    xhr.open('POST','/mySB/delete_sound.php', true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(str);
   }
