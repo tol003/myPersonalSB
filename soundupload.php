@@ -47,27 +47,28 @@ session_start();
     ?>
   </div>
 <?php
-if($_SESSION['email'] ){
-require_once("connection.php");
-  if($_SERVER["REQUEST_METHOD"] == 'GET'){
-  $sound_err = $_REQUEST["sound_err"];
-  
-  $img_err = $_REQUEST["img_err"];
-  $sbid = isset($_GET["sbid"])   ?  $_GET["sbid"] :  $_REQUEST["sbid"];
-echo '
-  <form action="soundupload.php" method="post" enctype="multipart/form-data">
-    Select sound to upload:
-    <input type="file" name="soundToUpload" id="soundToUpload"required ><br>
-    Select image to upload:
-    <input type="file" name="imageToUpload" id="imageToUpload" required><br>
-    <input type="hidden" name="sbid" value="'.$sbid.'" > 
-    <input type="submit" value="Upload" name="submit">
-    
-  </form>
-  <p style="color:red" >'.$img_err.' </p> <br>
-  <p style="color:red" >'.$sound_err.' </p> <br>';
+if(isset($_SESSION['email'])){
+  require_once("connection.php");
+    if($_SERVER["REQUEST_METHOD"] == 'GET'){
+    $sound_err = $_REQUEST["sound_err"];
+
+    $img_err = $_REQUEST["img_err"];
+    $sbid = isset($_GET["sbid"])   ?  $_GET["sbid"] :  $_REQUEST["sbid"];
+  echo '
+    <form action="soundupload.php" method="post" enctype="multipart/form-data">
+      Select sound to upload:
+      <input type="file" name="soundToUpload" id="soundToUpload"required ><br>
+      Select image to upload:
+      <input type="file" name="imageToUpload" id="imageToUpload" required><br>
+      <input type="hidden" name="sbid" value="'.$sbid.'" >
+      <input type="submit" value="Upload" name="submit">
+
+    </form>
+    <p style="color:red" >'.$img_err.' </p> <br>
+    <p style="color:red" >'.$sound_err.' </p> <br>';
   
 }
+
 elseif($_SERVER["REQUEST_METHOD"] == "POST"){
    $sound_err = "";
    $img_err = "";
