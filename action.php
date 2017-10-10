@@ -29,7 +29,7 @@
           }
 
           else{
-            $str .= '<img class="sb-main-image" src="./site_images/trees_small.jpg">';
+            $str .= '<img class="sb-main-image" src="./site_images/default_image.jpg">';
           }
 
           $str .= '<input class="sb-image-btn" type="submit" value="">
@@ -73,7 +73,7 @@
           }
 
           else{
-            $str .= '<img class="sb-main-image" src="./site_images/trees_small.jpg">';
+            $str .= '<img class="sb-main-image" src="./site_images/default_image.jpg">';
           }
 
           $str .= '<input class="sb-image-btn" type="submit" value="">

@@ -1,4 +1,4 @@
-<?php include 'access_control.php'; ?>
+//<?php include 'access_control.php'; ?>
 
 <?php
   if($_SESSION['admin'] == 0 or !isset($_SESSION['admin'])) {
