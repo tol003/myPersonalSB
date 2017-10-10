@@ -571,6 +571,7 @@ table{
   margin: 0 0 0 28px;
   font-family: optima, sans serif;
   outline: none;
+  cursor: pointer;
 }
 
 .title-field:focus ~ .confirm-btn{
