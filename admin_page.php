@@ -2,7 +2,7 @@
 
 <?php
   if($_SESSION['admin'] == 0 or !isset($_SESSION['admin'])) {
-    $newURL = "http://138.68.46.83/crud/index.php";
+    $newURL = "http://138.68.46.83/mySB/landing.php";
     header('Location: '.$newURL);
   }
 ?>
@@ -11,7 +11,7 @@
 
   <?php
     // redirect to ask for confirmation_delete
-    $newURL = "http://138.68.46.83/crud/confirmation_delete.php?delete_id=".$_GET['id']."&user_name_to_delete=".$_GET['delete_user_name']."";
+    $newURL = "http://138.68.46.83/mySB/confirmation_delete.php?delete_id=".$_GET['id']."&user_name_to_delete=".$_GET['delete_user_name']."";
     header('Location: '.$newURL);
 
     //$newURL = "http://138.68.46.83/crud/delete_user_table.php?delete_id=".$_GET['id']."";
@@ -133,38 +133,29 @@
     <body>
       <div class="nav-container">
         <ul>
-          <li><a href="/crud/index.php"><div>Soundboards</div></a>
+          <li><a href="./landing.php"><div>Soundboards</div></a>
             <div>
               <ul>
-                <li><a href="/crud/index.php">Public</a></li>
-                <?php
-                  if($_SESSION['user_email']){
-                    echo '<li><a href="/crud/private_SB.php">Private</a></li>';
-                  }
-                ?>
+                <li><a href="./landing.php">Public</a></li>
+                <?php if(isset($_SESSION['email'])): ?>
+                  <li><a href="./private_SB.php">Private</a></li>
+                <?php endif; ?>
               </ul>
             </div>
           </li>
-          <?php if (isset($_SESSION['user_email'])): ?>
-            <li><a href="/crud/log_out.php"><div>Log Out</div></a>
+          <?php if(isset($_SESSION['email'])): ?>
+            <li><a href="./logout.php"><div>Log Out</div></a>
+            </li>
+          <?php endif; ?>
+          <?php if ($_SESSION['admin']=='1'): ?>
+            <li><a href="./admin_page.php"><div>Admin</div></a>
             </li>
           <?php endif ?>
         </ul>
         <?php
-          if($_SESSION['user_email']){
-            echo '<p class="login" id="hello">'. $_SESSION['user_first_name'] .'</p>';
-          }
-
-          else{
-            echo '<form id="register" action="/crud/registration.php" method="get">
-              <input type="submit" value="Register">
-            </form>
-            <form class="login" action="/crud/login.php" method="get">
-              <input type="submit" value="Login">
-            </form>';
-          }
+          echo '<p class="login" id="hello">Hello, '. $_SESSION['first_name'] .'</p>';
         ?>
-       </div>
+      </div>
       <?php
       $get_all_non_admin = "SELECT user_id, username, password, first_name, last_name, email FROM users WHERE admin = '0'";
       $user_table_result = $conn->query($get_all_non_admin);
@@ -246,38 +237,31 @@
     <body>
       <div class="nav-container">
         <ul>
-          <li><a href="/crud/index.php"><div>Soundboards</div></a>
+          <div class="nav-container">
+        <ul>
+          <li><a href="./landing.php"><div>Soundboards</div></a>
             <div>
               <ul>
-                <li><a href="/crud/index.php">Public</a></li>
-                <?php
-                  if($_SESSION['user_email']){
-                    echo '<li><a href="/crud/private_SB.php">Private</a></li>';
-                  }
-                ?>
+                <li><a href="./landing.php">Public</a></li>
+                <?php if(isset($_SESSION['email'])): ?>
+                  <li><a href="./private_SB.php">Private</a></li>
+                <?php endif; ?>
               </ul>
             </div>
           </li>
-          <?php if (isset($_SESSION['user_email'])): ?>
-            <li><a href="/crud/log_out.php"><div>Log Out</div></a>
+          <?php if(isset($_SESSION['email'])): ?>
+            <li><a href="./logout.php"><div>Log Out</div></a>
+            </li>
+          <?php endif; ?>
+          <?php if ($_SESSION['admin']=='1'): ?>
+            <li><a href="./admin_page.php"><div>Admin</div></a>
             </li>
           <?php endif ?>
         </ul>
         <?php
-          if($_SESSION['user_email']){
-            echo '<p class="login" id="hello">'. $_SESSION['user_first_name'] .'</p>';
-          }
-
-          else{
-            echo '<form id="register" action="/crud/registration.php" method="get">
-              <input type="submit" value="Register">
-            </form>
-            <form class="login" action="/crud/login.php" method="get">
-              <input type="submit" value="Login">
-            </form>';
-          }
+          echo '<p class="login" id="hello">Hello, '. $_SESSION['first_name'] .'</p>';
         ?>
-       </div>
+      </div>
       <?php
       $get_all_non_admin = "SELECT user_id, username, password, first_name, last_name, email FROM users WHERE admin = '0'";
       $user_table_result = $conn->query($get_all_non_admin);
