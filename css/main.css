@@ -659,3 +659,35 @@ table{
   margin: 0 60px 0 0;
 }
 /** end private soundboard styling **/
+
+/** private sounds styling **/
+.sound-button-del{
+  margin: 10px 0 0 265px;
+}
+
+.sound-delete{
+  background-image: url('./sb_images/delete_icon.png');
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  outline:none;
+}
+
+.sound-button-edit{
+  margin: -32px 0 0 2px;
+}
+
+.sound-edit{
+  background-image: url('./sb_images/edit_black.png');
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+/** end private sounds styling **/
