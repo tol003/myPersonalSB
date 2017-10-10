@@ -3,6 +3,10 @@ function playMusic(id){
   currArtist = document.getElementById(id);
   music = currArtist.getElementsByTagName('audio')[0];
 
+  music.addEventListener('ended', function(e){
+    currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./site_images/playCircle.png)';
+  });
+
   if(music.paused){
     currArtist.getElementsByClassName('button-overlay')[0].style.backgroundImage = 'url(./site_images/pauseCircle.png)';
     music.currentTime = 0;
@@ -73,7 +77,7 @@ function deleteSBConfirm(element){
       }
     }
 
-    xhr.open('POST','/mySB/delete_SB.php', true);
+    xhr.open('POST','138/mySB/delete_SB.php', true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(str);
   }

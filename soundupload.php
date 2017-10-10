@@ -215,6 +215,7 @@ $mime = mime_content_type($types);
    if($uploadOk == 0 || $uploadOk_sd == 0){
       Header("Location: soundupload.php?sound_err=".$sound_err."&img_err=".$img_err);
    }
+   
    else{
      
      move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $image_file); 
