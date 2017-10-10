@@ -67,8 +67,8 @@
           echo  '<div>
                   <p>  </p>
                    <a id="add_btn" title="Add Sound"
-                   href="/crud/soundupload.php?sbid='.$_GET["sbid"].'">
-                    <img src="/crud/sb_images/addbtn.png"> </a>
+                   href="./soundupload.php?sbid='.$_GET["sbid"].'">
+                    <img src="./site_images/addbtn.png"> </a>
                  </div>';
         ?>
       </div>
