@@ -5,9 +5,10 @@ session_start();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>v2 Soundboard</title>
-  <link rel="stylesheet" href="./sb.css">
-  <script src="./sb.js"></script>
+  <title>v2.1 Soundboard</title>
+  <?php
+    include('header.php');
+  ?>
 </head>
 <body>
   <div class="nav-container">
