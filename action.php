@@ -101,14 +101,14 @@
       }
     }
 
-    $str .= '<form style="text-align:center" action="/crud/private_SB.php" method="POST"  >
+    $str .= '<form style="text-align:center" action="./private_SB.php" method="POST">
                <input type="text" name="sb_name" placeholder="Name" required>
                <br>
                <select name="status">
                <option value="0"> private </option>
                <option value="1"> public </option>
                </select> <br>
-               <input title="Add SoundBoard" type="image" src="/crud/sb_images/addbtn.png">
+               <input title="Add SoundBoard" type="image" src="./site_images/addbtn.png">
              </form>';
 
     echo $str;
@@ -153,7 +153,7 @@
                      <div class="button-overlay"></div>
                      <img class="image-sound" src="'. $row['img_path'] .'">
                    </div>
-                   <form id="'. $row['sound_id'] .'" class="sound-button-del" action="/crud/sound_delete_confirm.php" method="post"
+                   <form id="'. $row['sound_id'] .'" class="sound-button-del" action="./sound_delete_confirm.php" method="post"
                    onsubmit="return deleteSoundConfirm('. $row['sound_id'] .','. $sbID .')">
                    <input class="sound-delete" type="submit" value="">
                    <input type="hidden" name="sound_id" value="'. $row['sound_id'] .'">
@@ -161,7 +161,7 @@
                    <input type="hidden" name="sbid" value="'. $sbID .'">
 
                    </form>
-                   <form class="sound-button-edit" action="/crud/soundupdate.php" method="get">
+                   <form class="sound-button-edit" action="./soundupdate.php" method="get">
                    <input class="sound-edit" type="submit" value="">
                    <input type="hidden" name="sid" value="'. $row['sound_id'] .'">
                    <input type="hidden" name="sbid" value="'. $sbID .'">

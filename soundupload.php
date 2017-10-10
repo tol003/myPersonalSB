@@ -73,20 +73,20 @@ if(isset($_SESSION['email'])){
 elseif($_SERVER["REQUEST_METHOD"] == "POST"){
    $sound_err = "";
    $img_err = "";
-   $sb_image_dir = "sb_images/".$_SESSION['user_id']."/";
-   $sound_dir = "sounds/".$_SESSION['user_id']."/";
+   $images_dir = "./images/".$_SESSION['user_id']."/";
+   $sounds_dir = "./sounds/".$_SESSION['user_id']."/";
 
-   if (!file_exists($sb_image_dir)) {
-        mkdir($sb_image_dir, 0777, true);
+   if (!file_exists($images_dir)) {
+        mkdir($images_dir, 0777, true);
    }
-   if (!file_exists($sound_dir)) {
-      mkdir($sound_dir, 0777, true);
+   if (!file_exists($sounds_dir)) {
+      mkdir($sounds_dir, 0777, true);
    }
 
 
 
-   $sound_file = $sound_dir . basename($_FILES["soundToUpload"]["name"]);
-   $image_file = $sb_image_dir . basename($_FILES["imageToUpload"]["name"]);
+   $sound_file = $sounds_dir . basename($_FILES["soundToUpload"]["name"]);
+   $image_file = $images_dir . basename($_FILES["imageToUpload"]["name"]);
    $uploadOk = 1;
    $uploadOk_sd = 1;
    $imageFileType = pathinfo($image_file,PATHINFO_EXTENSION);
